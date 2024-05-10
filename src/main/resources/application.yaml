@@ -1,0 +1,24 @@
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    show-sql: true
+    defer-datasource-initialization: true  # para mantener la tabla ya creada 
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+        ddl-auto: update
+        transaction:
+          jta:
+            platform: true
+  h2:
+    console:
+      enabled: true
+      path: /h2   # default es h2-console
+
+
+
